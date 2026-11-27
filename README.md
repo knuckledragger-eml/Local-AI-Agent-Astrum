@@ -3,9 +3,17 @@
 A local AI agent that runs on your own hardware using Ollama. It can chat in the terminal, on Telegram, and via voice.
 
 ## Features
-- Terminal chat with tool calling (web search, file listing)
-- Telegram bot (so you can message it from your phone)
+- Terminal chat with tool calling
+- Telegram bot (message it from your phone)
 - Voice input (Whisper) + robotic text-to-speech (espeak)
+- Persistent conversation memory (saved to memory.json)
+
+## Tools
+- get_weather — current conditions for any location (Open-Meteo, no API key)
+- get_news — recent news headlines
+- web_search — general web search (Tavily API — add your own free key)
+- fetch_page — pull clean text from a URL
+- list_files — list files in a directory
 
 ## Requirements
 - Ubuntu (tested on a Dell OptiPlex 7070)
@@ -23,6 +31,7 @@ A local AI agent that runs on your own hardware using Ollama. It can chat in the
    pip install "av<19"
 4. Make sure Ollama is running and the model is available:
    ollama list
+5. (Optional) Get a free Tavily API key from https://tavily.com and paste it into agent.py for better web search.
 
 ## Usage
 
